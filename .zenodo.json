@@ -1,0 +1,29 @@
+{
+  "title": "Interpretable Machine Learning for CMIP6 Multi-Model Ensembles: Code and Analysis",
+  "description": "Analysis scripts and Jupyter notebook reproducing all results and figures in the paper 'Interpretable Machine Learning for CMIP6 Multi-Model Ensembles' submitted to Environmental Data Science.",
+  "upload_type": "software",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Siyi Wu",
+      "affiliation": "University of Toronto"
+    },
+    {
+      "name": "Steve Easterbrook",
+      "affiliation": "University of Toronto"
+    }
+  ],
+  "keywords": [
+    "CMIP6", "multi-model ensemble", "machine learning",
+    "climate science", "interpretability", "gating", "ridge regression",
+    "random forest", "ERA5"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://esgf-node.llnl.gov/",
+      "relation": "isSupplementTo"
+    }
+  ],
+  "access_right": "open"
+}
