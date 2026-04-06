@@ -1,0 +1,41 @@
+# ============================================================
+# requirements.txt
+# Interpretable Machine Learning for CMIP6 Multi-Model Ensembles
+#
+# Tested on Python 3.11 (macOS arm64 and Linux x86_64).
+# Install with:  pip install -r requirements.txt
+#
+# Note on Cartopy: requires GEOS and PROJ system libraries.
+# macOS:  brew install geos proj
+# Linux:  sudo apt-get install libgeos-dev libproj-dev
+# ============================================================
+
+# ── Core scientific stack ────────────────────────────────────
+numpy==1.26.4
+pandas==2.2.1
+scipy>=1.11.0              # used indirectly by sklearn and xarray
+
+# ── Machine learning ─────────────────────────────────────────
+scikit-learn>=1.3.0        # Ridge, RandomForestRegressor, KMeans, silhouette_score
+
+# ── Climate / geospatial data ────────────────────────────────
+xarray>=2024.1.0           # lazy netCDF loading, area-weighted means
+dask[array]>=2024.1.0      # chunked lazy computation (used via xarray)
+netCDF4>=1.6.0             # netCDF backend for xarray
+h5netcdf>=1.2.0            # alternative HDF5/netCDF backend (optional fallback)
+
+# ── Visualisation ────────────────────────────────────────────
+matplotlib==3.8.4
+seaborn==0.13.2
+cartopy==0.25.0            # geographic projections for spatial maps
+shapely>=2.0.0             # cartopy dependency
+pyproj>=3.3.1              # cartopy dependency
+pyshp>=2.3.0               # cartopy dependency
+
+# ── Parallelisation ──────────────────────────────────────────
+joblib>=1.3.0              # Parallel pixel loop in Section 4 (spatial gating)
+
+# ── Notebook environment ─────────────────────────────────────
+jupyter>=1.0.0
+notebook>=7.0.0
+ipykernel>=6.0.0
